@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/milligram.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <script src="js/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function ($) {
+        setInterval(function () { moveRight();}, 2000);	  
+  		var slideCount = $('#slider ul li').length;
+  		var slideWidth = $('#slider ul li').width();
+  		var slideHeight = $('#slider ul li').height();
+  		var sliderUlWidth = slideCount * slideWidth;
+  		$('#slider').css({ width: slideWidth, height: slideHeight });
+  		$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  	    $('#slider ul li:last-child').prependTo('#slider ul');
+  	    $('a.control_prev').click(function () { 
+  	        $('#slider ul').animate({ left: + slideWidth }, 200, function () {
+  	            $('#slider ul li:last-child').prependTo('#slider ul'); $('#slider ul').css('left', '');
+  	        });
+  	    });
+  	    $('a.control_next').click(function () {
+  	        $('#slider ul').animate({ left: - slideWidth }, 200, function () {
+  	            $('#slider ul li:first-child').appendTo('#slider ul'); $('#slider ul').css('left', '');
+  	        });
+  	    });
+  	});
+    </script>
+</head>
+<body>
+    <div class="container" style="width:720px; padding-top:20px;">
+      <div class="row">
+        <div class="column column-90">
+          <h1 class="title">The Five Seasons</h1>
+        </div>
+        <div class="column column-10"></div>
+      </div>
+        <div class="row">
+          <div class="column column-80">
+            <h3>Welcome to the Five Seasons!</h3>
+            Click on the image to navigate.<br/><br/>
+          </div>
+          <div class="column column-20"></div>
+        </div>
+
+        <div class="row">
+          <div class="column column-80">
+			<div id="slider">
+			  <a href="#" class="control_next">&gt;</a>
+			  <a href="#" class="control_prev">&lt;</a>
+			  <ul>
+			    <li><a href="/season?season=wi"><img src="images/winter.jpg"/></a></li>
+			    <li><a href="/season?season=sp"><img src="images/spring.jpg"/></a></li>
+			    <li><a href="/season?season=ea"><img src="images/easter.jpg"/></a></li>
+			    <li><a href="/season?season=su"><img src="images/summer.jpg"/></a></li>
+			    <li><a href="/season?season=au"><img src="images/autumn.jpg"/></a></li>
+			  </ul>
+        <br/>
+        <br/><br/>
+			</div> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="column column-100">
+            <h3>Leave a comment</h3>
+            <a href="/comment">Happy about your feedback!</a>
+          </div>
+        </div>
+      
+      </div>
+</div>
+</body>
+</html>

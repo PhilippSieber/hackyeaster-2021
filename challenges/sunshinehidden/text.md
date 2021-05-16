@@ -1,0 +1,3 @@
+I swear I had the flag a minute ago, but now it seems to be hidden somewhere...
+
+Go back to level 3 and analyze the files of the challenges again. If you look hard enough, you can find an additional flag.

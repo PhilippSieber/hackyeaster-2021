@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ansiart:
+    build: .
+    image: he2021/ansiart
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - '2105:8080'
+    stdin_open: true
+    tty: true
+networks:
+  challengenet:
+    external: true

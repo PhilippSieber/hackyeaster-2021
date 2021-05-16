@@ -1,0 +1,11 @@
+# solution
+- ssh to the docker
+- search files and directories
+- find .lost+found/flag.txt
+  - belongs to another group *pacman*
+  - only owner and group can read
+- find /home/pacman/.\"\\\?\$\*\'N\'\*\$\?\\\" and read the content -> a password
+- find /home/pacman/.bash-history
+  - `man sg` is a hint to the `sg command` (switch group)
+- `sg pacman -c 'cat /home/clyde/.lost+found/flag.txt'` 
+  - enter password

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Pix FX!</title>
+<th:block th:include="fragments/general.html :: headcontent"></th:block>
+<script>
+	function klipp() {
+		document.getElementById("code").select();
+		document.execCommand("copy");
+	}
+	function jump() {
+		window.location.href = "/picture?code="
+				+ document.getElementById('code').value;
+	}
+</script>
+</head>
+<body>
+  <div th:replace="fragments/general.html :: logo"></div>
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-6"></div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div class="centerbox-outer">
+        <div class="centerbox-inner">
+          <h2>Here's your code!</h2>
+          <input type="text" id="code" th:value="${code}" style="width: 100%; font-size: 15px;" /> <br /> <br />
+          <button class="pure-button" th:onclick="klipp();">copy code</button>
+          &nbsp;&nbsp;
+          <button class="pure-button" th:onclick="jump();">show image</button>
+          <br /> <br /> <br />
+          <h3>popular FX</h3>
+          <div class="popular">
+            <ul>
+              <li><a
+                href="/picture?code=7C1C3AF5B6BFC49B6A9D5843BB5FD57A94FFC9021EF2EC2C15FD00B2A4529FB565F4B859A2441D90BD217A234873CC963B48A7178D79D5620DBBC40272502630">7C1C3AF5B6BFC49B6A9D5843BB5FD57A94FFC9021EF2EC2C15FD00B2A4529FB565F4B859A2441D90BD217A234873CC963B48A7178D79D5620DBBC40272502630</a>
+              </li>
+              <li><a
+                href="/picture?code=A67A23D62E049D1089998290B4B6D3A0A5B6EFEDEFFC05B7C2C6F17FBA1CCF4126989A5A1B4D678F222F2C814C63F0B8DEDC69F92CE0A5981FEAAA9826310936">A67A23D62E049D1089998290B4B6D3A0A5B6EFEDEFFC05B7C2C6F17FBA1CCF4126989A5A1B4D678F222F2C814C63F0B8DEDC69F92CE0A5981FEAAA9826310936</a>
+              </li>
+              <li><a
+                href="/picture?code=660DC31DF4C094171EDDD2FC7FD646168348F28F5878E4937105ED086EDCA7BF03B4E8CD33D1345612D69B885E00BFECBFDDABD0CF705FEE9C0185C679FB2827">660DC31DF4C094171EDDD2FC7FD646168348F28F5878E4937105ED086EDCA7BF03B4E8CD33D1345612D69B885E00BFECBFDDABD0CF705FEE9C0185C679FB2827</a>
+              </li>
+              <li><a
+                href="/picture?code=4DA28E65F0EDA286FAF7D6E886D2EB45D919F98AF2CA9F603CF581D83E9517CE9FD4DCE6DCC320715ED45844EA76274D1B4B1E381415A92CF29DC5E9FF7159A7">4DA28E65F0EDA286FAF7D6E886D2EB45D919F98AF2CA9F603CF581D83E9517CE9FD4DCE6DCC320715ED45844EA76274D1B4B1E381415A92CF29DC5E9FF7159A7</a>
+              </li>
+              <li><a
+                href="/picture?code=41E5D00E5CECC3019834C99B403DE4B24933AF3087BCE219699D7E3EB178A06F7B4717A36C617760EC0AD8BFD5DF05B2">41E5D00E5CECC3019834C99B403DE4B24933AF3087BCE219699D7E3EB178A06F7B4717A36C617760EC0AD8BFD5DF05B2</a>
+              </li>
+              <li><a
+                href="/picture?code=471AC22004490BD0A16A6D053D4DBC8C4F47307C18DDC22BD33BCDB5B6E1AABC13A64FA00E718BC2B8C2DAAE58DA1DFB">471AC22004490BD0A16A6D053D4DBC8C4F47307C18DDC22BD33BCDB5B6E1AABC13A64FA00E718BC2B8C2DAAE58DA1DFB</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-6"></div>
+  </div>
+</body>
+</html>

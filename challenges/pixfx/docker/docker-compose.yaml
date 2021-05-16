@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pixfx:
+    build: .
+    image: he2021/pixfx
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - "2110:8080"
+networks:
+  challengenet:
+    external: true

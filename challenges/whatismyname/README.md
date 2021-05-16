@@ -1,0 +1,2 @@
+# solution
+Substitute the small white boxes ▫️ with 0's and the devil 😈 with 1's and convert from binary to get 1000000000000066600000000000001 (1030 + 666 × 1014 + 1), a prime which is commonly called Belphegor's prime - so the solution should be he2021{BELPHEGOR}.

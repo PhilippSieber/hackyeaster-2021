@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cafe Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+ <body>
+    <div id="f">
+      <div class="container">
+        <div class="row">
+          <h1 style="color: white;">Welcome to my Cafe!</h1>
+          <br/>
+          <p><img src="logo.png" style="width: 120px;"/></p>
+          <p>Choose what you want and enjoy!</p>
+            <form action="order" method="post">
+              <p>
+                  <select name="id" class="input-lg">
+                    <option value="11865457 Vanilla Cafe">Vanilla CAFE</option>
+                    <option value="42640575 Cherry Cola">Cherry COLA</option>
+                    <option value="80427209 Beef Jerky">BEEF Jerky</option>
+                  </select>
+                  <br/>
+                </p>
+                <p>
+                  <button type="submit" class="btn btn-success input-lg" style="font-size: 18px;">Order Item!</button>
+                </p>
+            </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

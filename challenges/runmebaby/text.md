@@ -1,0 +1,1 @@
+This one's easy, ain't it? Just run the `.class` file. Hope you like Java!

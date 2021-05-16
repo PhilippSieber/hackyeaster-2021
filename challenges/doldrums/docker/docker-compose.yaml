@@ -1,0 +1,18 @@
+version: '3'
+services:
+  doldrums:
+    build: .
+    image: he2021/doldrums
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - "2113:1024"
+    stdin_open: true
+    tty: true
+    restart: always
+    entrypoint: ./ynetd
+    command: ./challenge3
+networks:
+  challengenet:
+    external: true

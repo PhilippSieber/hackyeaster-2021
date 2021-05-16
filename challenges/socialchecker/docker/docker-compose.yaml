@@ -1,0 +1,13 @@
+version: '3'
+services:
+  socialchecker:
+    build: .
+    image: he2021/socialchecker
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - "2103:80"
+networks:
+  challengenet:
+    external: true

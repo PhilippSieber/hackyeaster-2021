@@ -1,0 +1,1 @@
+This time, the file is **not** an image.

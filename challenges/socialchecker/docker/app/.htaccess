@@ -1,0 +1,1 @@
+RedirectMatch \.txt$ http://http.cat/401

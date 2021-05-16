@@ -1,0 +1,1 @@
+Some characters are blocked - find a workaround!

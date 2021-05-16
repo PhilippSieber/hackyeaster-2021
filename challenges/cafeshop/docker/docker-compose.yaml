@@ -1,0 +1,13 @@
+version: '3'
+services:
+  cafeshop:
+    build: .
+    image: he2021/cafeshop
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - '2104:8080'
+networks:
+  challengenet:
+    external: true

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cafe Shop</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+	<body>
+	<div id="f">
+		<div class="container">
+		<div class="row">
+			<p><img src="logo.png" style="width: 120px;"/></p>
+            <p>Here's your order. Enjoy!!</p>
+            <p><img th:src="${item}" style="height: 240px;"/></p>
+		</div>
+		</div>
+	</div>
+	</body>
+</html>

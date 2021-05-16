@@ -1,0 +1,1 @@
+You don't need to run the app. Just decompile and analyze it.

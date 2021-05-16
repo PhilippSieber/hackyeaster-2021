@@ -1,0 +1,13 @@
+version: '3'
+services:
+  thefiveseasons:
+    build: .
+    image: he2021/thefiveseasons
+    restart: always
+    networks:
+      - challengenet
+    ports:
+      - 2111:8080
+networks:
+  challengenet:
+    external: true
