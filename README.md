@@ -14,6 +14,9 @@ The following players have beaten all levels and got rewarded with a "Ph1n1sh3r"
 
 darkice, darkstar, daubsi, DrSchottky, scryh, novak, explo1t, keep3r, evandrix, ptu, m4ttm00ny, SmartSmurf, khae, EngyCZ, Adib3r, vernjan, fix86, brp64, Mitsch, xdjibi, Nezzarll, AstroViking, TobjasR, Robbe7730
 
+## Survey Results
+[Hacky Easter 2021 Survey Results.pdf](docs/Hacky%20Easter%202021%20Survey%20Results.pdf "Survey Results PDF")
+
 ## Top 10
 ![top 10](images/top10.png "Top 10")
 
